@@ -80,15 +80,15 @@ public class Menu {
 		isNext=in.nextBoolean();
 
 		while(isNext) {
-			outOfStock=true;
-			boolean isPrevious=false;
-		    PreparedStatement ps=getConnection().prepareStatement("select * from menu where dish=?");
+		outOfStock=true;
+		boolean isPrevious=false;
+		PreparedStatement ps=getConnection().prepareStatement("select * from menu where dish=?");
 	    	System.out.println("enter dish name you want ?");
 	    	String dish=in.next();
 	    	ps.setString(1, dish);
 
-		    System.out.println("enter quantity in kg ?");
-		    int quantity=in.nextInt();
+		System.out.println("enter quantity in kg ?");
+		int quantity=in.nextInt();
 
 	    	ResultSet rs=ps.executeQuery();
 		    while(rs.next()) {
