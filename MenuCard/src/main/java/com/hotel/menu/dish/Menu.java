@@ -111,7 +111,7 @@ public class Menu {
 						        }		        
 					        if(!isPrevious) {
 						    orders.add(dish);
-					    	orders.add(String.valueOf(quantity));
+					    	    orders.add(String.valueOf(quantity));
 						    orders.add(String.valueOf(quantity*rs.getLong(3)));
 						    totalPrice=totalPrice+quantity*rs.getLong(3);
 					    	if(rs.getInt(2)-quantity == 0) {
